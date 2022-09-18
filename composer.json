@@ -1,12 +1,12 @@
 {
-    "name": "nunomaduro/skeleton-php",
+    "name": "zambinij/enum-helpers",
     "description": "A skeleton repository for my packages",
     "keywords": ["php", "skeleton", "package"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Carlos Martins",
+            "email": "carlosmartins353@gmail.com"
         }
     ],
     "require": {
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NunoMaduro\\SkeletonPhp\\": "src/"
+            "EnumHelpers\\Enums\\": "src/Enums"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "EnumHelpers\\Enums\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
