@@ -2,11 +2,12 @@
 
 namespace EnumHelpers\Tests\Fixtures;
 
-use EnumHelpers\Enums\Values;
+use EnumHelpers\Traits\Keys;
+use EnumHelpers\Traits\Values;
 
 enum EnumWithValues: string
 {
-    use Values;
+    use Values, Keys;
 
     case IN_PROGRESS = 'In Progress';
     case DONE = 'Done';

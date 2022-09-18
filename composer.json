@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "EnumHelpers\\Enums\\": "src/Enums"
+            "EnumHelpers\\Traits\\": "src/Traits"
         }
     },
     "autoload-dev": {

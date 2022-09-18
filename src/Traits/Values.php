@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-namespace EnumHelpers\Enums;
+namespace EnumHelpers\Traits;
 
 trait Values
 {
+    use FormatAsString;
+
     public static function values(bool $asString = false, string $separator = ', ', bool $beautify = false): array|string
     {
         $cases = self::cases();
@@ -19,21 +21,5 @@ trait Values
         }
 
         return $values;
-    }
-
-    protected static function formatAsString(array $values, string $separator, bool $beautify): string
-    {
-        if (! $beautify) {
-            return \implode($separator, $values);
-        }
-
-        $handleString = \array_map(static function ($value) {
-            $value = \str_replace('_', ' ', $value);
-            $value = \strtolower($value);
-
-            return \ucwords($value);
-        }, $values);
-
-        return \implode($separator, $handleString);
     }
 }
