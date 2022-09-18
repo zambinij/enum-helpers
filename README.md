@@ -1,11 +1,5 @@
 > **Requires [PHP 8.1+](https://php.net/releases/)**
 
-⚡️ Create your package using [Composer](https://getcomposer.org):
-
-```bash
-composer create-project nunomaduro/skeleton-php --prefer-source PackageName
-```
-
 🧹 Keep a modern codebase with **Pint**:
 ```bash
 composer lint
