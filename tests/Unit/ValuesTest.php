@@ -1,5 +1,8 @@
 <?php
 
+use EnumHelpers\Tests\Fixtures\EnumWithoutValues;
+use EnumHelpers\Tests\Fixtures\EnumWithValues;
+
 it('returns all keys from a pure enum')
     ->expect(EnumWithoutValues::values())
     ->toBeArray()
