@@ -12,17 +12,17 @@ it('can return all keys from a backed enum')
     ]);
 
 it('can return all keys from a backed enum as string')
-    ->expect(EnumWithValues::keys(asString: true))
+    ->expect(EnumWithValues::keysAsString())
     ->toBeString()
     ->toBe('IN_PROGRESS, DONE');
 
 it('can return all keys from a backed enum as a beautified string')
-    ->expect(EnumWithValues::keys(asString: true, beautify: true))
+    ->expect(EnumWithValues::keysAsString(beautify: true))
     ->toBeString()
     ->toBe('In Progress, Done');
 
 it('can return all keys from a backed enum with a given string separator')
-    ->expect(EnumWithValues::keys(asString: true, separator: ';'))
+    ->expect(EnumWithValues::keysAsString(separator: ';'))
     ->toBeString()
     ->toBe('IN_PROGRESS;DONE');
 
@@ -35,16 +35,16 @@ it('can return all keys from a pure enum')
     ]);
 
 it('can return all keys from a pure enum as string')
-    ->expect(EnumWithoutValues::keys(asString: true))
+    ->expect(EnumWithoutValues::keysAsString())
     ->toBeString()
     ->toBe('IN_PROGRESS, DONE');
 
 it('can return all keys from a pure enum as a beautified string')
-    ->expect(EnumWithoutValues::keys(asString: true, beautify: true))
+    ->expect(EnumWithoutValues::keysAsString(beautify: true))
     ->toBeString()
     ->toBe('In Progress, Done');
 
 it('can return all keys from a pure enum with a given string separator')
-    ->expect(EnumWithoutValues::keys(asString: true, separator: ';'))
+    ->expect(EnumWithoutValues::keysAsString(separator: ';'))
     ->toBeString()
     ->toBe('IN_PROGRESS;DONE');

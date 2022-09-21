@@ -8,16 +8,13 @@ trait Keys
 {
     use FormatAsString;
 
-    public static function keys(bool $asString = false, string $separator = ', ', bool $beautify = false): array|string
+    public static function keys(bool $asString = false, string $separator = ', ', bool $beautify = false): array
     {
-        $cases = self::cases();
+        return \array_column(self::cases(), 'name');
+    }
 
-        $keys = \array_column($cases, 'name');
-
-        if ($asString) {
-            return self::formatAsString($keys, $separator, $beautify);
-        }
-
-        return $keys;
+    public static function keysAsString(string $separator = ', ', bool $beautify = false): string
+    {
+        return self::formatAsString(self::keys(), $separator, $beautify);
     }
 }
