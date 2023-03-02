@@ -8,7 +8,7 @@ trait Keys
 {
     use FormatAsString;
 
-    public static function keys(bool $asString = false, string $separator = ', ', bool $beautify = false): array
+    public static function keys(): array
     {
         return \array_column(self::cases(), 'name');
     }
